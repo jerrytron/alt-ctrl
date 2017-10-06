@@ -1,0 +1,11 @@
+= Glossary
+
+[[HID]]
+== HID
+
+An acronym for Human Interface Device.
+
+[[human-interface-device]]
+== Human Interface Device
+
+This term is meant to represent any common device we use to interface with computers (from desktops and laptops to smartphones, and even gaming consoles). This can include, but is not limited to, keyboards, mice, joysticks, gamepads, and touchscreens.

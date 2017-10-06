@@ -1,0 +1,3 @@
+# Don't put in build folder.
+*.sh
+resources/*

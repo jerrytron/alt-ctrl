@@ -1,0 +1,3 @@
+{% if output.name == "website" %}
+image::cover_medium.jpg[Burn Your Keyboard]
+{% endif %}

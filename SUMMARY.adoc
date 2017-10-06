@@ -1,0 +1,15 @@
+= Summary
+
+. link:README.adoc[Cover]
+
+. link:background/README.adoc[A Background]
+.. link:background/HID.adoc[The Human Interface Device]
+
+. link:getting-started/README.adoc[Getting Started]
+.. link:getting-started/SHOPPING.adoc[Let's go shopping!]
+... link:getting-started/TERMS.adoc[Categories & Terms]
+... link:getting-started/LIST.adoc[The List]
+... link:getting-started/NEED.adoc[What do you NEED?]
+
+. link:conclusion:README.adoc[Conclusion]
+
