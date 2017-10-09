@@ -1,2 +1,3 @@
-# The Human Interface Device
+== The Human Interface Device
 
+PUT EXAMPLES OF HID DEVICES HERE, GO INTO MORE DETAIL

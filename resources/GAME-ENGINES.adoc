@@ -1,0 +1,23 @@
+== Game Engines
+
+For handling weird situations where you need to remap key inputs on your computer, here are two pieces of software that you can try:
+
+https://pqrs.org/osx/karabiner/:[Karabiner: Keyboard customizer for OSX]
+http://ahkscript.org/[AutoHotkey: Macro creation and automation software for Windows.]
+Here are some resources for game making tools!
+
+* http://www.stencyl.com/[Stencyl] - A simple, no coding (drag and drop logic) 2D game creation tool.
+* http://www.puzzlescript.net/[PuzzleScript] - A completely free, open-source, and web-based game creation tool.
+* * http://www.puzzlescript.net/Documentation/documentation.html[PuzzleScript Documentation]
+* * Here is a https://stuartspixelgames.com/2016/05/13/how-to-start-programming-in-puzzle-script/[great set of tutorials] to learn how each game works!
+* * Here is a page describing http://fireside.gamejolt.com/post/atypical-puzzlescript-games-gjxshwrc[interesting PuzzleScript games].
+* https://ledoux.itch.io/bitsy[Bitsy] - Simple web based tool for building tiny games and worlds!
+* http://www.lexaloffle.com/pico-8.php[PICO-8] - A self-contained game engine and virtual console that you can build 'cartridges' for!
+* * https://drive.google.com/open?id=0BxUMR4Qu8J7pWmphRlZlT1kxSUE[Resource Folder Link] - Find the version for your operating system (https://drive.google.com/open?id=0BxUMR4Qu8J7pcFBqYm1nOHJDV0U[windows installer], https://drive.google.com/open?id=0BxUMR4Qu8J7pbXFQdGh5cGdkV00[windows stand-alone], https://drive.google.com/open?id=0BxUMR4Qu8J7peW42aVc0V1JRMVk[Mac OSX]), and download either the PICO-8 PDFs, or all four put together as an epub or mobi (for e-readers).
+* https://love2d.org/wiki/Getting_Started[LÖVE 2D] - A free, open-source 2D game framework using the Lua scripting language.
+* * Here is a https://love2d.org/wiki/Getting_Started[getting started guide]!
+* https://godotengine.org/[Godot] - A free, open-source 2D and 3D game engine.
+* * Harder than Stencyl, but possibly simpler than GameMaker.
+* http://www.yoyogames.com/gamemaker[GameMaker] - Not free, and more difficult than all of the above. Probably only use if you already have experience using it.
+* https://unity3d.com/[Unity] - A professional 3D engine. Definitely don't use this unless you already have experience.
+ 

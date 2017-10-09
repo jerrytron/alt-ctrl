@@ -4,6 +4,14 @@
     "description": null,
 
     "plugins": [],
+
+    "styles": {
+        "website": "assets/styles/website.css",
+        "ebook": "assets/styles/website.css",
+        "pdf": "assets/styles/website.css",
+        "mobi": "assets/styles/website.css",
+        "epub": "assets/styles/website.css"
+    },
     
     "links": {
         "home": null,

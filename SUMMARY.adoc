@@ -3,13 +3,23 @@
 . link:README.adoc[Cover]
 
 . link:background/README.adoc[A Background]
-.. link:background/HID.adoc[The Human Interface Device]
+//.. link:background/HID.adoc[The Human Interface Device]
 
 . link:getting-started/README.adoc[Getting Started]
 .. link:getting-started/SHOPPING.adoc[Let's go shopping!]
-... link:getting-started/TERMS.adoc[Categories & Terms]
-... link:getting-started/LIST.adoc[The List]
-... link:getting-started/NEED.adoc[What do you NEED?]
+//... link:getting-started/TERMS.adoc[Categories & Terms]
+//... link:getting-started/LIST.adoc[The List]
+.. link:getting-started/SOFTWARE.adoc[Setting Up Software]
+//... link:getting-started/NEED.adoc[What do you NEED?]
+
+. link:starter-keyboard/README.adoc[Designers First Keyboard]
+.. link:starter-keyboard/FIRST-BUTTON.adoc[Your First Button]
+.. link:starter-keyboard/BUTTONS-PINS.adoc[Buttons and Pins]
+.. link:starter-keyboard/DEBUG-CODE.adoc[Debugging and Code]
+//.. link:starter-keyboard/TOUCH-SENSING.adoc[Touch Sensing]
+
+//. link:resources/README.adoc[Additional Resources]
+//.. link:resources/GAME-ENGINES.adoc[Game Engines]
 
 . link:conclusion:README.adoc[Conclusion]
 

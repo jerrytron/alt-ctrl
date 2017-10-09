@@ -1,0 +1,63 @@
+== Starter Keyboard Tutorial: Debugging & Code
+:imagesdir: ../assets/images
+
+Please be sure you have gone through Keyboard Firmware Tutorial - Part 1 first!
+
+More on Debugging
+This tutorial we will be making changes to the default keyboard firmware to give you more control. Since we ended with debugging last time, we'll start with how to change the debugging settings inside the code. Open the firmware and scroll down (or use the search function) until you find this: 
+
+hid-keyboard-debugs.png
+
+There are four toggles, or booleans, I created to help control what events print out to the serial monitor. Two of them are on by default. Changing them is easy, simply change true to false to turn off a setting, or change false to true to turn on a setting. We haven't talked about how to use touch sensing yet, so just remember this is where the debugging settings are when we do.
+
+What they do...
+kDebugTouchEvents: If on, this setting will print a line of text when it senses the beginning of a touch, and again when it senses the ending of a touch. Here is what will print if I use pin 1 to sense touch, and I press and release it.
+
+Touch Press - Pin: 1
+
+Touch Release - Pin: 1
+
+kDebugTouchVals: If on, this setting will print the current value for each active touch pin every 1/2 second (by default). The reason it is off by default is it will generate a lot of information! We'll go into how to use this properly when we talk about how to use touch sensing, but this is how to turn the debug printing on and off.
+
+kDebugTouchValPlots: If on, instead of printing text information about touch values to the serial monitor, it will send raw data that the Serial Plotter can use. If you go to Tools and click Serial Plotter instead of the serial monitor, you will see the touch values graphed over time. Requires kDebugTouchVals to be true.
+
+kDebugBtnEvents: If on, this setting will print a line of text when it detects a button press, and again when it detects a button release. Here is what will print if I use pin 2 with a keypress for W.
+
+Btn Press - Pin: 2, Key Val: 61466
+
+Btn Release - Pin: 2, Key Val: 61466
+
+Tip: Remember after you make code changes you can click the checkmark in the upper-left to compile (verify) your code, and the arrow to upload it to your Teensy. Clicking the arrow will do both in one step!
+
+Changing Keypresses
+Again, this tutorial is focused on the Teensy LC, but the same information applies if you are using the Teensy 3.x starter code, there are just a different amount of pins and the numbers associated with them. Either way, moving forward!
+
+You have buttons working, but they aren't sending the keyboard presses that you want! What are you to do? Luckily for you, it is very easy to change what pins trigger what key presses.
+
+There are also two sections, one for Buttons and one for Touch Sensing. We are just worried about buttons for now.
+
+Scroll down in the code until you find the Part II: Buttons section: 
+
+hid-keyboard-buttons.png
+
+The line of code you are concerned about is this:
+
+const uint16_t kButtonKeys[] = { KEY_W, KEY_A, KEY_S, KEY_D, KEY_Z, KEY_X, KEY_UP, KEY_LEFT, KEY_DOWN, KEY_RIGHT, KEY_SPACE, KEY_ENTER, KEY_ESC };
+
+This is called an array. There are exactly 13 values in this array and other arrays that involve the buttons, one for each available digital pin on the Teensy LC (that isn't a touch sensing pin). If you scrolled down further you'd find a section of arrays that define all of the digital and touch pins we can use.
+
+hid-keyboard-pins-lc.png
+
+Each element in the kButtonPins array corresponds to a key in the kButtonKeys array we just looked at. Let's say we want to change pin 9 to press the keyboard key for R.
+
+const uint8_t kButtonPins[] = { 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 20, 21 };
+
+Count to find out how many places in 9 is in kButtonPins. You'll find it is the 6th element.
+Count in kButtonKeys until you get to the 6th element. You'll find it is currently KEY_X. This is the value to change!
+Navigate to the Teensy Keyboard Documentation and scroll down to All Keys Codes.
+Find the name of the key you want to use, and change KEY_X. In our case, we would change it to KEY_R.
+That's all there is to it! For letters it is simple, it is always 'KEY_' followed by the uppercase letter (don't include the single quotes).
+
+But wait! You might have noticed there was a comment just above kButtonKeys with numbers listed above the keys. That isn't actual code, you can tell because it starts with double slashes like this, //, but the pin numbers are printed there as a quick way to know which pin you are editing the key for. If you change the keys they might not stay lined up though, it isn't automatic! 
+
+Tip: If you want to learn about how to use touch sensing, proceed on to Keyboard Firmware Tutorial - Part 3!

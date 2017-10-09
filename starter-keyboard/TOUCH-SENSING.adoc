@@ -1,0 +1,120 @@
+== Starter Keyboard Tutorial: Touch Sensing
+:imagesdir: ../assets/images
+
+Using Touch Sensing
+By default, touch sensing using the default keyboard firmware is almost ready to go out of the box, but there is one change you need to make in the code for each touch pin you want to use (for a refresher on what pins can use touch, see tutorial part 1). Unlike the pins setup for buttons, when we use touch sensing we are expecting a variable signal (much like a potentiometer, a range of values), so we can't ignore signals that hover around due to noise.
+
+A button only gets triggered if the signal hits close to the logic voltage level (the highest voltage the pin can expect) or zero volts (ground or the common line), so the default firmware can safely be checking ALL of the button pins even if you haven't hooked anything up to them. That is why they just work.
+
+Wiring
+The Teensy uses capacitive touch sensing, which means touch sensing does not require a ground. You only connect a wire from the touch sensing pin to the conductive material you want to use. A common strategy is to connect a wire of required length, strip a good chunk of plastic off the end, and sandwich it onto some copper tape (the bottom copper layer the size you want for touching, then the bare metal of the wire, finally a smaller piece of copper tape to hold the wire down).
+
+Of course, you don't need to use copper tape... teensy-touch-apple.jpg
+
+Fun huh? That isn't a Teensy LC, so ignore the place the ire is plugged. Ok, so first, pick a touch sensing capable pin you want to test with this tutorial (hint, I'll be using pin 15 later, but you should understand how to use any touch pin). All you will need is a single piece of wire to plug into your breadboard. Ready? To the code!
+
+Similar to with the buttons, scroll down in the code until you find the Part III. Touch Sensing:
+
+hit-keyboard-touch-active-lc.png
+
+ Remember how you counted into the button pin array until you found the pin you wanted, then counted the same amount into the keys array to change the key code? It is the same thing here, except you need to turn on the specific touch pins you want to use. I recommend just turning on one pin for the rest of the tutorial so you know how to test it. You can set them active or inactive any time you want to help debug in the future.
+
+When possible, I also commented the pin numbers above each array element as a quick way to know the pin you are affecting.
+
+Let's say you want to use touch sensing on pin 15. If you count into the pin array, you'll see it is the fifth number in.
+
+const uint8_t kTouchPins[] = { 0, 1, 3, 4, 15, 16, 17, 18, 19, 22, 23 };
+
+So to activate that pin, you need to set the fifth boolean in kTouchPinsActive (the array highlighted in the code above) to true.
+
+const bool kTouchPinsActive[] = { false, false, false, false, true, false, false, false, false, false, false };
+
+Now it is ready to use!
+
+Changing the key codes is the same as with the buttons (except it is called kTouchKeys), just count in and make changes to the key code corresponding to the pin #.
+
+const uint16_t kTouchKeys[] = { KEY_W, KEY_A, KEY_S, KEY_D, KEY_UP, KEY_LEFT, KEY_DOWN, KEY_RIGHT, KEY_SPACE };
+
+The Master Switch
+Ok, I did skip over one feature that is important to understand and ensure is set properly. There is a special setting that can turn all touch sensing on and off. You'll find it toward the top, just below the debug booleans.
+
+hid-keyboard-touch-as-btns.png
+
+By default, it is set to false, so you shouldn't have to change it to start using touch sensing, but I want you to be away. So why is this here? The only reason to turn it on, or set it to true, is if 13 buttons aren't enough for your project. If you set it to true, all touch sensing pins and key codes will be treated as buttons instead of touch. 
+
+Warning: Even if you are using the touch pins as buttons, you must still apply any code changes you want to the TOUCH SENSING section, such as altering the key codes.
+
+ teensy-touch-wire.jpg
+
+Ok, you are ready to test! You should have picked a touch sensing pin #, plugged a wire into the breadboard at that pin, set the touch sense pin active in the code, so just upload the code and open the serial monitor!
+
+Tip: For easy testing, make sure the debug value kDebutTouchEvents is true so it will print out events in the serial monitor. A refresher can be found in tutorial part 2.
+
+With the serial monitor open, touch the tip of the wire and then release. You should see the following print out (I'm using pin 15 so check what you used).
+
+arduino-serial-monitor-touch.png
+
+One difference from the button debug output is the addition of the Read Val. A touch sensing pin can provide a range from 0 - 65535. You can see here that the value read that triggered the press event was 4236 and the value that triggered the release event was 1030. That is because for each touch sensing pin we can set a threshold value, the number that triggers a change in state. This number is 1500 by default.
+
+hid-touch-thresholds.png
+
+You may have noticed earlier that there was another addition to the touch sensing code compared to the button code. Once again, the values correspond to each touch sensing pin, so you count in to adjust the threshold for a specific touch pin.
+
+Deciding on a Threshold
+Ok, you can see how a touch value above the threshold triggers a touch and below triggers a release. How do you decide on a threshold and what if your demo didn't work that nicely?
+
+The environment is a factor! The current humidity, the length of your wire, the density of the connected material (copper tape, a metal bolt, etc.), even you touching other conductive objects all affect the values that come in when the touch-sensitive input is at rest (not being touched) and when it is in contact (being touched). You may need to adjust the threshold throughout designing your project until you aren't making any more major changes.
+
+The goal is always the same: find a threshold number that is always higher than resting values, and lower than contact values.
+
+So how can you find this value? If touch events aren't being triggered how can you know what the values are?
+
+hid-keyboard-debugs.png
+
+Remember this? It is time to set kDebugTouchVals to true (keep kDebugTouchValPlot false). I recommend only having one touch pin active at this time. Upload the code and open the serial monitor. By default, every 1/2 second the value of every active touch sense pin will print out. This is why it is easier to work with one at a time.
+
+arduino-serial-monitor-touch-vals.png
+
+This will allow you to see how the values change as you touch and release your input. In this case, it looks like when I'm not touching the input, the value floats around 1000, or ~1000, when I touch it, it starts to rise and settles at just over 5000. A good rule of thumb is to just calculate the median value. So, (1000 + 5000) / 2 = 3000. Our touch sensing is likely to be more reliable (few false positives) if we set the threshold for pin 15 to 3000.
+
+Printing Faster or Slower
+You can change how fast the debug values are sent. As mentioned earlier they default at 1/2 seconds or 500 milliseconds. Search in the code for the following: hid-keyboard-touch-millis.png
+
+You can change this value to adjust how often, or the frequency of output.
+
+Warning: Don't set the time too short! It will overload the serial monitor and slow down your computer. I recommend no slower than 100, definitely no slower than 50. It won't hurt anything though, but you might need to unplug the Teensy and force close Arduino.
+
+One More Fun Feature
+Sometimes it can be helpful to have a real-time graph of numerical data like what touch sensing provides, so instead of opening the Serial Monitor, we are going to open the Serial Plotter. This can be a great visual way to see if touch pins are working and what sort of ranges you have to work with. Let's take a look at the debug settings one last time.
+
+hid-keyboard-debugs.png
+
+To set the code for outputting values we can plot, you need to set the debug booleans to the following:
+
+const bool kDebugTouchEvents = false;
+const bool kDebugTouchVals = true;
+const bool kDebugTouchValPlot = true;
+const bool kDebugBtnEvents = false;
+
+You want to turn off kDebugTouchEvents and kDebugBtnEvents because they will mess up the numerical data. You have to turn on kDebugTouchVals so that there are any numbers being output, and turning on kDebugTouchValPlot tells the code to reformat the data for easy plotting.
+
+After making these changes, upload the code, click on Tools, and click on Serial Plotter. Wait a few seconds, then touch the end of your test wire and hold it. After a little bit of time release. You should see the value jump up when touched and drop back down when released.
+
+serial-plotter-touch-single.png
+
+What I think makes the Serial Plotter really useful is when you have numerous touch inputs you want to test at the same time. With the serial monitor, it can be difficult to distinguish values for different pins as they quickly scroll by. Here is another graph with three touch inputs setup. You'll notice a spike where I touch and release each of the three inputs.
+
+serial-plotter-touch-multi.png
+
+You can have all of the touch pins active and it will plot each of them with a different color. It is harder to see the exact values, but much easier to see that they are working and the approximate ranges.
+
+Tip: When using the Serial Monitor, you can uncheck the Autoscroll in the bottom left corner to take a closer look at the values. Then you can scroll through the data with at least some ease.
+
+That's all for now!
+There are a few more features the default keyboard firmware has to offer, such as adding modifier keys to a button or touch event (for example, instead of just Z, it could be CTRL + Z or SHIFT + CTRL + Z). For now, if you are interested in using modifiers, ask me, or try to figure it out by looking at the code.
+
+Hint... look for this code (or the touch version of it):
+
+hid-keyboard-key-mods.png
+
+Can you figure out how it works? By now you should be able to!

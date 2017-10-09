@@ -1,0 +1,6 @@
+== Your First Button
+
+The best part about the starter code you uploaded is that it will automatically check any buttons you hook up to the Teensy. So, let's hook up a button and see something **happen**! After that, we'll take a step back and learn more about the Teensy, it's pins, and what else we can do with the code.
+
+We aren't going to go into much of the _why_ here, that'll come next. This section is about showing you that after pressing a button _you_ connected to the Teensy, a key is pressed on _your_ computer.
+

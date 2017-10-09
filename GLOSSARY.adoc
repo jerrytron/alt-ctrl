@@ -9,3 +9,13 @@ An acronym for Human Interface Device.
 == Human Interface Device
 
 This term is meant to represent any common device we use to interface with computers (from desktops and laptops to smartphones, and even gaming consoles). This can include, but is not limited to, keyboards, mice, joysticks, gamepads, and touchscreens.
+
+[[MDB]]
+== MDB
+
+An acronum for Microcontroller Development Board.
+
+[[microcontroller-development-board]]
+== Microcontroller Development Board
+
+A circuit board designed to facilitate experimentation with a particular microcontroller, which are usually too small and difficult to connect with directly. The most known examples are Arduino boards.
