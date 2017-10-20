@@ -1,19 +1,17 @@
 == Starter Keyboard Tutorial: Buttons & Pins
 :imagesdir: ../assets/images
 
-For the first few projects, you won't be expected to get your hands too dirty in the code. The good news is I have already written very useful default firmware (software you put on your Teensy) that makes buttons and touch inputs easy to use!
-
-=== Get the latest code!
-You should already have your environment setup to use Arduino and write firmware to the Teensy. It is a good idea to download the default firmware from link:https://github.com/jerrytron/alt-ctrl-hid-teensy[**TeensyLC Github Code**] before a new project to ensure you have the latest, but how you use it is the same. Download, unzip and navigate to the hid-keyboard folder to open the default keyboard code.
+=== Ready to go?
+You should have already gone through the <<../getting-started/SOFTWARE.adoc#, *software setup*>> section, setup the required software, downloaded the latest code from the link:https://github.com/jerrytron/alt-ctrl-hid-teensy[**Alt Ctrl Teensy Repository**], and uploaded the starter keyboard code to your Teensy. Go ahead and open the  _starter-keyboard-teensy_ for the Teensy you are using.
 
 === Buttons and Pins
 This default firmware was designed to run out-of-the-box. Simply upload it to your Teensy and you'll be able to hook up buttons and make things happen! Later on we'll look at how you can make simple changes to get more control over how it works, but for now, let's just get it working.
 
 It is important to make a mental connection between the pin numbers you will see referenced in code or in tutorials like this with the pin numbers on the Teensy board itself. When you first got your Teensy it may not have had any legs (little metal prongs), so the pin numbers refer to the holes along the sides of the board. This Teensy Pinout Chart (Links to an external site.)Links to an external site. shows you what pin numbers are associated with what holes and features. Print it out if you don't have a hard copy and reference it as we go on.
 
-There are three kinds of pins that will be important for now. Ground, Digital Pins, and Touch Sense Pins. We've talked about GND or Ground (or common). Each button will have to have one connection to ground, though they can all use the same one. It is simply a common reference, so however you choose to wire it, every button connects to ground.
+There are three kinds of pins that we will cover right now. Ground (or GND or common), Digital Pins, and Touch Sense Pins. Each button will have to have one connection to ground, though they can all use the same one. In fact, anytime a component needs a connection to ground, it can connect with other ground wires (as long as one wire eventually gets to the ground on the Teensy). Ground provides a common low reference, usually zero volts. You can also think about it as _LOW_ or _off_ or _false_.
 
-The second and final connection every button must have is a Digital Pin. This provides two things: one, the logic voltage level that is used as the logical opposite of ground (think of ground as 0, low, or false where the logical voltage is 1, high, or true). It also provides us a way to ask what the current state of the button is (more accurately we are asking the state of the pins voltage level, but let's keep it simple).
+The second and final connection every button must have is a Digital Pin. This provides two things: first, _HIGH_ voltage level that is the opposite of ground. Think of it as _HIGH_ or _on_ or _true_. Second, it provides a way to ask what the current state of the button is. In the code, we can _ask_ the pin if it is _HIGH_ or _LOW_.
 
 image::teensy-digital-pin-key.png[Digital Pins]
 
@@ -29,7 +27,7 @@ To start, we only care about getting a regular button working, so the only reaso
 
 FYI: It is very easy to set the firmware to let you use all digital pins for buttons and ignore touch sensing, it just isn't necessary for now.
 
-Testing and Debugging
+=== Testing and Debugging
 So you want to know that your button is working? You're in luck! The surest way to know is by opening up the Serial Monitor in the Arduino software.
 
 Tip: If you want a list of every digital pin you can use and the key presses they send by default, jump down to the end of this tutorial. You should really have a button hooked up for this section!
@@ -56,6 +54,40 @@ Default Button Pins
 To make things easier, here is a list of every digital pin that you can hook buttons up to without any changes and the key presses they will generate.
 
 Tip: If you want to change the keys that buttons press, or just to learn more, proceed on to Keyboard Firmware Tutorial - Part 2!
+
+kbd:[W]
+
+|===
+|Pin # | Key Press
+
+| 2 | kbd:[W]
+
+| 5 | kbd:[A]
+
+| 6 | kbd:[S]
+
+| 7 | kbd:[D]
+
+| 8 | kbd:[Z]
+
+| 9 | kbd:[X]
+
+| 10 | kbd:[Up Arrow]
+
+| 11 | kbd:[Left Arrow]
+
+| 12 | kbd:[Down Arrow]
+
+| 13 | kbd:[Right Arrow]
+
+| 14 | kbd:[Space]
+
+| 20 | kbd:[Enter]
+
+| 21 | kbd:[Esc]
+
+|===
+
 
 Pin # = Key Press
 

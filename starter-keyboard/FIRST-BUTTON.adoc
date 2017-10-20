@@ -1,6 +1,81 @@
 == Your First Button
+// Basedir assets & images.
+:imagesdir: ../assets/images/first-button
 
-The best part about the starter code you uploaded is that it will automatically check any buttons you hook up to the Teensy. So, let's hook up a button and see something **happen**! After that, we'll take a step back and learn more about the Teensy, it's pins, and what else we can do with the code.
+The best part about the starter code you uploaded is that it will automatically check any buttons you hook up to the Teensy. So, let's hook up a button and see something *happen*! After that, we'll take a step back and learn more about the Teensy, it's pins, and how you can start customizing the starter code.
 
-We aren't going to go into much of the _why_ here, that'll come next. This section is about showing you that after pressing a button _you_ connected to the Teensy, a key is pressed on _your_ computer.
+By the end of this section we should be able to connect your Teensy to your computer and it work like a keyboard!
 
+=== The Humble Wire Cutter
+
+We'll need to cut a few pieces of wire so we have something to hook up our button with. You'll need to find your solid core wire, strand wire, and wire stripper. If you examine your wire stripper you'll notice the inside of the jaw is flat, that is used for cutting wire.
+
+This is your wire stripper. Get to know this tool, it is your best friend!
+
+image::hakko-wire-stripper.png[Wire Stripper, height=200, align=center]
+
+TIP: If you haven't stripped wire before, take a look at this link:https://learn.sparkfun.com/tutorials/working-with-wire/how-to-strip-a-wire[*Working with Wire Tutorial*]. Take a few minutes to practice before the next steps.
+
+=== List of Supplies
+
+* 2 x 5 inch (or longer) pieces of strand wire
+* 2 x 3 inch (or longer) pieces of solid core wire
+* Teensy LC
+* Breadboard
+* Arcade Button
+
+=== Stripping Some Wire
+
+TIP: If you aren't sure which spool of wire is strand or solid core, just bend it a little. The stiffer wire is solid core!
+
+Take each piece of strand wire and strip about an inch off of each end. Then take each piece of solid core wire and strip 1/2 inch off each end.
+
+WARNING: Please always wear your safety goggles when you are you cutting, stripping, or soldering wire!
+
+._All the supplies you need._
+image::first-btn-01-supplies.png[Supplies Needed, height=400, align=center]
+
+{empty} +
+
+._Carefully twist each end of the strand wire (toward left)._
+image::first-btn-02-wires.png[Threaded Wires, height=400, align=center]
+
+{empty} +
+
+._Twist one strand wire around one solid core wire._
+image::first-btn-03-twist.png[Twist Wires, height=400, align=center]
+
+{empty} +
+
+._Push cap on gently and twist until it resists._
+image::first-btn-04-capped.png[Capped Wires, height=400, align=center]
+
+{empty} +
+
+._Repeat the previous steps twice so you have two sets of wire._
+image::first-btn-05-breadboard.png[Wires in Breadboard, height=400, align=center]
+
+{empty} +
+
+._Connect the solid wire ends to *ground* and *pin 21* as shown._
+image::first-btn-06-close.png[Closeup Wires, height=400, align=center]
+
+{empty} +
+
+._Thread either strand wire end through either button lead._
+image::first-btn-07-threaded.png[Button Threaded, height=400, align=center]
+
+{empty} +
+
+._Wrap the excess wire around the metal lead._
+image::first-btn-08-twisted.png[Button Twisted, height=400, align=center]
+
+{empty} +
+
+._Repeat with the other wire end on the other lead._
+image::first-btn-09-double.png[Both Connections, height=400, align=center]
+
+{empty} +
+
+._This is how your button hookup should look!_
+image::first-btn-10-done.png[Complete, height=400, align=center]

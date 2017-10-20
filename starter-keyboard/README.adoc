@@ -1,5 +1,5 @@
 == Designers First Keyboard
 
-If you completed <<../getting-started/SOFTWARE.adoc#uploading-the-code, *uploading the starter code*>> then you now have a fully functioning keyboard emulation device that *you* setup yourself!
+If you completed <<../getting-started/UPLOADING.adoc#, *uploading the starter code*>> then you now have a fully functioning keyboard emulation device that *you* setup yourself!
 
 In fact, you don't actually need to touch any code yet. It's time to hook up our first button!

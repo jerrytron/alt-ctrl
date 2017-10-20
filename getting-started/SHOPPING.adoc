@@ -8,6 +8,8 @@ The three online stores I recommend to purchase parts are https://sparkfun.com[*
 
 === The Starter List
 
+Below is a detailed list of parts to build your own alt ctrl starter kit. You can also jump right to this http://a.co/ef1apix[*Amazon Parts List*] so it is easy to purchase what you need.
+
 |===
 | Image | Item | ~Price
 
@@ -39,39 +41,13 @@ a| image::shopping/twist-terminal.png[Twist Terminal, height=100, align=center] 
 
 3+| To get started I suggest some sort of arcade buttons, which we will focus on first, but which are totally up to you. A joystick just acts like four buttons.
 
-a| image::shopping/arcade-btn-small.png[Small Arcade Button, height=100, align=center] | https://www.amazon.com/EG-Buttons-Perfect-Fighting-Joystick/dp/B01N5JRU2R/[Mini Arcade Buttons] | $11.99 (12 pcs.)
+a| image::shopping/arcade-btn-small-top.png[Small Arcade Button, height=100, align=center] | https://www.amazon.com/EG-Buttons-Perfect-Fighting-Joystick/dp/B01N5JRU2R/[Mini Arcade Buttons] | $11.99 (12 pcs.)
 
 a| image::shopping/arcade-btn-large.png[Large Arcade Button, height=100, align=center] | https://www.amazon.com/Reyann-Happ-Standard-Arcade-Button/dp/B00V0OM7WO/[Large Arcade Buttons] | $12.00 (6 pcs.)
 
-a| image::shopping/joystick-top.png[Joystick, height=100, align=center] | https://www.amazon.com/Competition-Switchable-Operation-Elliptical-Precision/dp/B01MY8NQEW/[Joystick] | $11.99 (1 pc.)
+a| image::shopping/joystick-top.png[Joystick, height=100, align=center] | https://www.amazon.com/Competition-Switchable-operation-Elliptical-RetroArcade-us/dp/B00EM34ZN4/[Joystick] | $11.99 (1 pc.)
 
-|===
-
-|===
-| Item | ~Price
-
-2+| You can get the Teensy LC cheaper without the metal legs (male headers) pre-attached, but to easily connect to it you'd need to also buy headers and solder them on.
-| https://www.amazon.com/Teensy-LC-with-pins/dp/B016MZVBOA/[Teensy LC w/ headers] | $22.95 (1 pc.)
-You might already have a cable, it just needs to be capable of sending data (like a micro-usb cable used for a phone).
-| https://www.amazon.com/AmazonBasics-USB-Male-Micro-Cable/dp/B01EK87KW8/[Micro-USB Cable] | $8.99 (1 pc.)
-
-2+| Get any breadboard, just no smaller then 400 points (one that looks like this).
-| https://www.amazon.com/microtivity-IB400-400-point-Experiment-Breadboard/dp/B0084A7PI8/[Breadboard] | $4.99 (1 pc.)
-
-2+| This is for cutting wire and stripping the end of wire to expose the metal.
-| https://www.amazon.com/Hakko-CSP-30-1-Stripper-Maximum-Capacity/dp/B00FZPHMUG/[Hakko Wire Stripper/Cutter] | $11.00 (1 pc.)
-
-2+| Strand wire wraps easily (such as a button lead), solid pushes into breadboards easily (to connect to a Teensy pin). You can also find packs with multiple colors to be more organized, just stick with 22 AWG (the diameter of the wire.)
-| https://www.amazon.com/dp/B00NB3U2BU/[22 AWG Strand Wire - 100ft] | $10.00 (1 pc.)
-| https://www.amazon.com/Remington-Industries-22UL1007SLDBLA-Hook-Up-Diameter/dp/B010T5Y6PU/[22 AWG Solid Wire - 100ft] | $9 (1 pc.)
-
-2+| Attach wire together (like strand and solid) with twist or screw terminals.
-| https://www.amazon.com/Electrical-Connectors-Terminals-Connection-Assortment/dp/B01MPXUEPO/[Wire Twist Terminals] | $9.99 (158 pcs.)
-
-2+| To get started I suggest some sort of arcade buttons, which we will focus on first, but which are totally up to you. A joystick just acts like four buttons.
-| https://www.amazon.com/EG-Buttons-Perfect-Fighting-Joystick/dp/B01N5JRU2R/[Mini Arcade Buttons] | $11.99 (12 pcs.)
-| https://www.amazon.com/Reyann-Happ-Standard-Arcade-Button/dp/B00V0OM7WO/[Large Arcade Buttons] | $12.00 (6 pcs.)
-| https://www.amazon.com/Competition-Switchable-Operation-Elliptical-Precision/dp/B01MY8NQEW/[Joystick] | $11.99 (1 pc.)
+a| image::shopping/safety-glasses.png[Safety Glasses, height=100, align=center]  | https://www.amazon.com/Encon-Wraparound-Veratti-Safety-Translucent/dp/B005STFKGM[Satefy Glasses] | $4.95 (1 pc.)
 |===
 
 While you wait for you shipment to arrive, let's get your computer setup with the software you need!

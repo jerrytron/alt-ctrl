@@ -3,7 +3,7 @@
     "author": "Jerry Belich",
     "description": null,
 
-    "plugins": [],
+    "plugins": ["asciidoc-admonition-icons"],
 
     "styles": {
         "website": "assets/styles/website.css",

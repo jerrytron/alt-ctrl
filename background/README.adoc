@@ -8,6 +8,6 @@ It is because these devices are so common and how they talk standardized that we
 
 This set of tutorials will grow over time, but the initial goal is the same. Give you a path to invest in learning more, including a basic set of parts to buy and starter code that will allow you to focus on some simply wiring, and presto!
 
-If you have any feedback, please head to [jerrytron.com](jerrytron.com) and use the contact form.
+If you have any feedback, please head to https://jerrytron.com[*jerrytron.com*] and use the contact form.
 
 Let's get started!
