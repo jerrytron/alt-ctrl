@@ -16,7 +16,7 @@
 . link:starter-keyboard/README.adoc[Designers First Keyboard]
 .. link:starter-keyboard/FIRST-BUTTON.adoc[Your First Button]
 .. link:starter-keyboard/BUTTONS-PINS.adoc[Buttons and Pins]
-.. link:starter-keyboard/DEBUG-CODE.adoc[Debugging and Code]
+//.. link:starter-keyboard/DEBUG-CODE.adoc[Debugging and Code]
 //.. link:starter-keyboard/TOUCH-SENSING.adoc[Touch Sensing]
 
 //. link:resources/README.adoc[Additional Resources]

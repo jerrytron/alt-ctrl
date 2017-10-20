@@ -6,7 +6,7 @@ Please be sure you have gone through Keyboard Firmware Tutorial - Part 1 first!
 More on Debugging
 This tutorial we will be making changes to the default keyboard firmware to give you more control. Since we ended with debugging last time, we'll start with how to change the debugging settings inside the code. Open the firmware and scroll down (or use the search function) until you find this: 
 
-hid-keyboard-debugs.png
+image:hid-keyboard-debugs.png[HID Keyboard Debugs]
 
 There are four toggles, or booleans, I created to help control what events print out to the serial monitor. Two of them are on by default. Changing them is easy, simply change true to false to turn off a setting, or change false to true to turn on a setting. We haven't talked about how to use touch sensing yet, so just remember this is where the debugging settings are when we do.
 
@@ -38,7 +38,7 @@ There are also two sections, one for Buttons and one for Touch Sensing. We are j
 
 Scroll down in the code until you find the Part II: Buttons section: 
 
-hid-keyboard-buttons.png
+image:hid-keyboard-buttons.png[HID Keyboard Buttons]
 
 The line of code you are concerned about is this:
 
@@ -46,7 +46,7 @@ const uint16_t kButtonKeys[] = { KEY_W, KEY_A, KEY_S, KEY_D, KEY_Z, KEY_X, KEY_U
 
 This is called an array. There are exactly 13 values in this array and other arrays that involve the buttons, one for each available digital pin on the Teensy LC (that isn't a touch sensing pin). If you scrolled down further you'd find a section of arrays that define all of the digital and touch pins we can use.
 
-hid-keyboard-pins-lc.png
+image:hid-keyboard-pins-lc.png[HID Keyboard Pins]
 
 Each element in the kButtonPins array corresponds to a key in the kButtonKeys array we just looked at. Let's say we want to change pin 9 to press the keyboard key for R.
 
