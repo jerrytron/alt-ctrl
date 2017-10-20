@@ -1,0 +1,475 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Debugging and Code · Burn Your Keyboard</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="Jerry Belich">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-asciidoc-admonition-icons/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="BUTTONS-PINS.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://jerrytron.com" target="_blank" class="custom-link">jerrytron.com</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Cover
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../background/">
+            
+                <a href="../background/">
+            
+                    
+                    A Background
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../getting-started/SHOPPING.html">
+            
+                <a href="../getting-started/SHOPPING.html">
+            
+                    
+                    Let’s go shopping!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../getting-started/SOFTWARE.html">
+            
+                <a href="../getting-started/SOFTWARE.html">
+            
+                    
+                    Setting Up Software
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../getting-started/UPLOADING.html">
+            
+                <a href="../getting-started/UPLOADING.html">
+            
+                    
+                    Uploading the Starter Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Designers First Keyboard
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="FIRST-BUTTON.html">
+            
+                <a href="FIRST-BUTTON.html">
+            
+                    
+                    Your First Button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="BUTTONS-PINS.html">
+            
+                <a href="BUTTONS-PINS.html">
+            
+                    
+                    Buttons and Pins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="DEBUG-CODE.html">
+            
+                <a href="DEBUG-CODE.html">
+            
+                    
+                    Debugging and Code
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="conclusion:README.adoc">
+            
+                    
+                    Conclusion
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Debugging and Code</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_starter_keyboard_tutorial_debugging_code">Starter Keyboard Tutorial: Debugging &amp; Code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please be sure you have gone through Keyboard Firmware Tutorial - Part 1 first!</p>
+</div>
+<div class="paragraph">
+<p>More on Debugging
+This tutorial we will be making changes to the default keyboard firmware to give you more control. Since we ended with debugging last time, we&#x2019;ll start with how to change the debugging settings inside the code. Open the firmware and scroll down (or use the search function) until you find this:</p>
+</div>
+<div class="paragraph">
+<p><a href="../GLOSSARY.html#hid" class="glossary-term" title="An acronym for Human Interface Device.">hid</a>-keyboard-debugs.png</p>
+</div>
+<div class="paragraph">
+<p>There are four toggles, or booleans, I created to help control what events print out to the serial monitor. Two of them are on by default. Changing them is easy, simply change true to false to turn off a setting, or change false to true to turn on a setting. We haven&#x2019;t talked about how to use touch sensing yet, so just remember this is where the debugging settings are when we do.</p>
+</div>
+<div class="paragraph">
+<p>What they do&#x2026;&#x200B;
+kDebugTouchEvents: If on, this setting will print a line of text when it senses the beginning of a touch, and again when it senses the ending of a touch. Here is what will print if I use pin 1 to sense touch, and I press and release it.</p>
+</div>
+<div class="paragraph">
+<p>Touch Press - Pin: 1</p>
+</div>
+<div class="paragraph">
+<p>Touch Release - Pin: 1</p>
+</div>
+<div class="paragraph">
+<p>kDebugTouchVals: If on, this setting will print the current value for each active touch pin every 1/2 second (by default). The reason it is off by default is it will generate a lot of information! We&#x2019;ll go into how to use this properly when we talk about how to use touch sensing, but this is how to turn the debug printing on and off.</p>
+</div>
+<div class="paragraph">
+<p>kDebugTouchValPlots: If on, instead of printing text information about touch values to the serial monitor, it will send raw data that the Serial Plotter can use. If you go to Tools and click Serial Plotter instead of the serial monitor, you will see the touch values graphed over time. Requires kDebugTouchVals to be true.</p>
+</div>
+<div class="paragraph">
+<p>kDebugBtnEvents: If on, this setting will print a line of text when it detects a button press, and again when it detects a button release. Here is what will print if I use pin 2 with a keypress for W.</p>
+</div>
+<div class="paragraph">
+<p>Btn Press - Pin: 2, Key Val: 61466</p>
+</div>
+<div class="paragraph">
+<p>Btn Release - Pin: 2, Key Val: 61466</p>
+</div>
+<div class="paragraph">
+<p>Tip: Remember after you make code changes you can click the checkmark in the upper-left to compile (verify) your code, and the arrow to upload it to your Teensy. Clicking the arrow will do both in one step!</p>
+</div>
+<div class="paragraph">
+<p>Changing Keypresses
+Again, this tutorial is focused on the Teensy LC, but the same information applies if you are using the Teensy 3.x starter code, there are just a different amount of pins and the numbers associated with them. Either way, moving forward!</p>
+</div>
+<div class="paragraph">
+<p>You have buttons working, but they aren&#x2019;t sending the keyboard presses that you want! What are you to do? Luckily for you, it is very easy to change what pins trigger what key presses.</p>
+</div>
+<div class="paragraph">
+<p>There are also two sections, one for Buttons and one for Touch Sensing. We are just worried about buttons for now.</p>
+</div>
+<div class="paragraph">
+<p>Scroll down in the code until you find the Part II: Buttons section:</p>
+</div>
+<div class="paragraph">
+<p><a href="../GLOSSARY.html#hid" class="glossary-term" title="An acronym for Human Interface Device.">hid</a>-keyboard-buttons.png</p>
+</div>
+<div class="paragraph">
+<p>The line of code you are concerned about is this:</p>
+</div>
+<div class="paragraph">
+<p>const uint16_t kButtonKeys[] = { KEY_W, KEY_A, KEY_S, KEY_D, KEY_Z, KEY_X, KEY_UP, KEY_LEFT, KEY_DOWN, KEY_RIGHT, KEY_SPACE, KEY_ENTER, KEY_ESC };</p>
+</div>
+<div class="paragraph">
+<p>This is called an array. There are exactly 13 values in this array and other arrays that involve the buttons, one for each available digital pin on the Teensy LC (that isn&#x2019;t a touch sensing pin). If you scrolled down further you&#x2019;d find a section of arrays that define all of the digital and touch pins we can use.</p>
+</div>
+<div class="paragraph">
+<p><a href="../GLOSSARY.html#hid" class="glossary-term" title="An acronym for Human Interface Device.">hid</a>-keyboard-pins-lc.png</p>
+</div>
+<div class="paragraph">
+<p>Each element in the kButtonPins array corresponds to a key in the kButtonKeys array we just looked at. Let&#x2019;s say we want to change pin 9 to press the keyboard key for R.</p>
+</div>
+<div class="paragraph">
+<p>const uint8_t kButtonPins[] = { 2, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 20, 21 };</p>
+</div>
+<div class="paragraph">
+<p>Count to find out how many places in 9 is in kButtonPins. You&#x2019;ll find it is the 6th element.
+Count in kButtonKeys until you get to the 6th element. You&#x2019;ll find it is currently KEY_X. This is the value to change!
+Navigate to the Teensy Keyboard Documentation and scroll down to All Keys Codes.
+Find the name of the key you want to use, and change KEY_X. In our case, we would change it to KEY_R.
+That&#x2019;s all there is to it! For letters it is simple, it is always &apos;KEY_&apos; followed by the uppercase letter (don&#x2019;t include the single quotes).</p>
+</div>
+<div class="paragraph">
+<p>But wait! You might have noticed there was a comment just above kButtonKeys with numbers listed above the keys. That isn&#x2019;t actual code, you can tell because it starts with double slashes like this, //, but the pin numbers are printed there as a quick way to know which pin you are editing the key for. If you change the keys they might not stay lined up though, it isn&#x2019;t automatic!</p>
+</div>
+<div class="paragraph">
+<p>Tip: If you want to learn about how to use touch sensing, proceed on to Keyboard Firmware Tutorial - Part 3!</p>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="BUTTONS-PINS.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Buttons and Pins">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Debugging and Code","level":"1.4.3","depth":2,"next":{"title":"Conclusion","level":"2.1","depth":1,"url":"conclusion:README.adoc","ref":"conclusion:README.adoc","articles":[]},"previous":{"title":"Buttons and Pins","level":"1.4.2","depth":2,"path":"starter-keyboard/BUTTONS-PINS.adoc","ref":"starter-keyboard/BUTTONS-PINS.adoc","articles":[]},"dir":"ltr"},"config":{"plugins":["asciidoc-admonition-icons"],"styles":{"website":"assets/styles/website.css","ebook":"assets/styles/website.css","pdf":"assets/styles/website.css","mobi":"assets/styles/website.css","epub":"assets/styles/website.css"},"pluginsConfig":{"asciidoc-admonition-icons":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Jerry Belich","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":36,"bottom":36},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Burn Your Keyboard","links":{"home":null,"about":null,"sidebar":{"jerrytron.com":"https://jerrytron.com"}},"gitbook":"*","description":null},"file":{"path":"starter-keyboard/DEBUG-CODE.adoc","mtime":"2017-10-20T02:47:20.000Z","type":"asciidoc"},"gitbook":{"version":"3.2.2","time":"2017-10-20T02:47:31.767Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
